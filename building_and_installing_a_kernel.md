@@ -68,3 +68,13 @@ $ sudo update-grub
 $ sudo reboot now
 ```
 
+## 8. Issues encountered
+- While installing on a Ubuntu 20.10 on KVM, I had this compilation error: __BTF: .tmp_vmlinux.btf: pahole (pahole) is not available__
+This was fixed by installing `dwarves` and retrying make. THanks to SO link given below.
+```bash
+$ sudo apt install -y dwarves
+```
+
+
+# References:
+1. https://stackoverflow.com/questions/61657707/btf-tmp-vmlinux-btf-pahole-pahole-is-not-available
